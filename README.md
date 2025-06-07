@@ -93,6 +93,7 @@ JWT_SECRET=umadevi
 npm run dev
 
 The server runs on:
+https://charging-backend-6.onrender.com/
 📍 http://localhost:5000
 
 🔐 Example Authorization Header (Postman)
