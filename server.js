@@ -1,33 +1,24 @@
 const express = require('express');
-const dotenv = require('dotenv');
 const cors = require('cors');
-const connectDB = require('./config/db');
-
-const authRoutes = require('./routes/auth');
-const stationRoutes = require('./routes/stations');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 
 dotenv.config();
-connectDB();
 
 const app = express();
-
-// ✅ Enable CORS for frontend (default: allow all)
 app.use(cors());
-
-// ✅ Enable JSON body parsing
 app.use(express.json());
 
-// ✅ API Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/stations', stationRoutes);
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/stations', require('./routes/stations'));
 
-// ✅ Basic home route
-app.get('/', (req, res) => {
-  res.send('API is working 🚀');
-});
-
-// ✅ Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`✅ Server running on port ${PORT}`);
-});
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('✅ MongoDB connected');
+    app.listen(process.env.PORT || 5000, () => {
+      console.log('✅ Server running on port', process.env.PORT || 5000);
+    });
+  })
+  .catch((err) => {
+    console.error('❌ MongoDB connection failed:', err.message);
+  });
