@@ -7,7 +7,11 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
+<<<<<<< HEAD
   origin: ['']
+=======
+  origin: ['https://charging-backend-6.onrender.com/', 'http://charging-frontend12.onrender.com/']
+>>>>>>> a110b2072a56b8edeb62fe3a873e25c1c22da0b2
 }));
 app.use(express.json());
 
