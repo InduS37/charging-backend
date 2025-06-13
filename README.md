@@ -86,8 +86,8 @@ npm install
 
 2. Create .env File
 PORT=5000
-MONGO_URI=mongodb+srv://Indhu:Indhu.k0307@cluster0.pdhlobc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-JWT_SECRET=umadevi
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
 
 3. Run the Server
 npm run dev
