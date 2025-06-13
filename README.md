@@ -101,7 +101,7 @@ https://charging-backend-6.onrender.com/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2IyMTY1MjJhMzExZTUyNjJhY2JjZSIsImlhdCI6MTc0ODkxMTA4NCwiZXhwIjoxNzQ4OTk3NDg0fQ.vouMMO4_HbAb08FidXhmybQ0s0cjktLwoYcKOWpvu5k
 
 Backend deployed on Render
-Frontend deployed on Vercel
+Frontend deployed on Render
 
 🧑‍💻 Author
 Indhu – B.Tech CSE Final Year
